@@ -38,6 +38,10 @@
             printPrimaryNumbers(1, 30);
             printPrimaryNumbers(0, 1);
 
+            Console.WriteLine("------------------");
+
+            printPyramid();
+
 
         }
 
@@ -142,6 +146,28 @@
             }
             Console.WriteLine();
         }
+        #endregion
+
+        #region Pyramid Method
+
+        static void printPyramid()
+        {
+            int space = 12;
+            for (int i = 1; i <= space; i++)
+            {
+                for (int j = 1; j <= space - i; j++)
+                {
+                    Console.Write(" ");
+                }
+                for (int k = 1; k <= i; k++)
+                {
+                    Console.Write("* ");
+                }
+                Console.WriteLine();
+            }
+        }
+
+
         #endregion
 
     }
