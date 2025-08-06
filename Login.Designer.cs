@@ -82,7 +82,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.Control;
+            BackColor = SystemColors.HotTrack;
             ClientSize = new Size(501, 234);
             Controls.Add(txtPassword);
             Controls.Add(txtUsername);
@@ -92,6 +92,7 @@
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
+            Load += Login_Load;
             ResumeLayout(false);
             PerformLayout();
         }
