@@ -4,7 +4,8 @@ namespace Task6
 {
     public partial class Form1 : Form
     {
-        private Repository<Employee> _employeeRepo;
+
+        private GenericIRepository<Employee> _employeeRepo;
 
         public Form1()
         {
@@ -13,31 +14,15 @@ namespace Task6
             LoadEmployees();
         }
 
-        private void LoadEmployees()
+        private void btnBrowse_Click(object sender, EventArgs e)
         {
-            dgvEmployees.DataSource = _employeeRepo.GetAll()
-                .Select(x => new { x.Id, x.Name, x.Job, x.Salary })
-                .ToList();
-        }
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp";
 
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            int id = Convert.ToInt32(dgvEmployees.CurrentRow.Cells[0].Value);
-            _employeeRepo.Delete(id);
-            _employeeRepo.Save();
-            MessageBox.Show("Employee Deleted!");
-            LoadEmployees();
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                picEmployee.Image = Image.FromFile(ofd.FileName);
+            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -75,6 +60,22 @@ namespace Task6
             }
         }
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(dgvEmployees.CurrentRow.Cells[0].Value);
+            _employeeRepo.Delete(id);
+            _employeeRepo.Save();
+            MessageBox.Show("Employee Deleted!");
+            LoadEmployees();
+        }
+
+        private void LoadEmployees()
+        {
+            dgvEmployees.DataSource = _employeeRepo.GetAll()
+                .Select(x => new { x.Id, x.Name, x.Job, x.Salary })
+                .ToList();
+        }
+
         private void btnShow_Click(object sender, EventArgs e)
         {
             string keyword = txtSearch.Text;
@@ -101,16 +102,6 @@ namespace Task6
             {
                 return Image.FromStream(ms);
             }
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void picBox_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

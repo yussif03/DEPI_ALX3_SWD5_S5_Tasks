@@ -1,6 +1,4 @@
 ﻿
-using Task6.Models;
-
 namespace Task6
 {
     partial class Form1
@@ -31,7 +29,7 @@ namespace Task6
         /// </summary>
         private void InitializeComponent()
         {
-            lblId = new Label();
+            lblID = new Label();
             lblName = new Label();
             lblJob = new Label();
             lblSalary = new Label();
@@ -42,31 +40,30 @@ namespace Task6
             cmbName = new ComboBox();
             lblSearch = new Label();
             txtSearch = new TextBox();
-            btnSave = new Button();
-            BtnEdit = new Button();
-            btnDelete = new Button();
             picEmployee = new PictureBox();
-            btnShow = new Button();
             dgvEmployees = new DataGridView();
+            btnSave = new Button();
+            btnEdit = new Button();
+            btnDelete = new Button();
+            btnShow = new Button();
             btnBrowse = new Button();
             ((System.ComponentModel.ISupportInitialize)picEmployee).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvEmployees).BeginInit();
             SuspendLayout();
             // 
-            // lblId
+            // lblID
             // 
-            lblId.AutoSize = true;
-            lblId.Location = new Point(53, 28);
-            lblId.Name = "lblId";
-            lblId.Size = new Size(31, 20);
-            lblId.TabIndex = 0;
-            lblId.Text = "ID :";
-            lblId.Click += label1_Click;
+            lblID.AutoSize = true;
+            lblID.Location = new Point(52, 32);
+            lblID.Name = "lblID";
+            lblID.Size = new Size(31, 20);
+            lblID.TabIndex = 0;
+            lblID.Text = "ID :";
             // 
             // lblName
             // 
             lblName.AutoSize = true;
-            lblName.Location = new Point(28, 76);
+            lblName.Location = new Point(27, 80);
             lblName.Name = "lblName";
             lblName.Size = new Size(56, 20);
             lblName.TabIndex = 1;
@@ -75,7 +72,7 @@ namespace Task6
             // lblJob
             // 
             lblJob.AutoSize = true;
-            lblJob.Location = new Point(45, 124);
+            lblJob.Location = new Point(44, 128);
             lblJob.Name = "lblJob";
             lblJob.Size = new Size(39, 20);
             lblJob.TabIndex = 2;
@@ -84,7 +81,7 @@ namespace Task6
             // lblSalary
             // 
             lblSalary.AutoSize = true;
-            lblSalary.Location = new Point(28, 172);
+            lblSalary.Location = new Point(27, 176);
             lblSalary.Name = "lblSalary";
             lblSalary.Size = new Size(56, 20);
             lblSalary.TabIndex = 3;
@@ -92,29 +89,29 @@ namespace Task6
             // 
             // txtName
             // 
-            txtName.Location = new Point(90, 73);
+            txtName.Location = new Point(98, 77);
             txtName.Name = "txtName";
-            txtName.Size = new Size(282, 27);
+            txtName.Size = new Size(262, 27);
             txtName.TabIndex = 4;
             // 
             // txtJob
             // 
-            txtJob.Location = new Point(90, 121);
+            txtJob.Location = new Point(98, 125);
             txtJob.Name = "txtJob";
-            txtJob.Size = new Size(282, 27);
+            txtJob.Size = new Size(262, 27);
             txtJob.TabIndex = 5;
             // 
             // txtSalary
             // 
-            txtSalary.Location = new Point(90, 169);
+            txtSalary.Location = new Point(98, 173);
             txtSalary.Name = "txtSalary";
-            txtSalary.Size = new Size(282, 27);
+            txtSalary.Size = new Size(262, 27);
             txtSalary.TabIndex = 6;
             // 
             // lblcmbName
             // 
             lblcmbName.AutoSize = true;
-            lblcmbName.Location = new Point(34, 297);
+            lblcmbName.Location = new Point(33, 291);
             lblcmbName.Name = "lblcmbName";
             lblcmbName.Size = new Size(56, 20);
             lblcmbName.TabIndex = 7;
@@ -123,113 +120,111 @@ namespace Task6
             // cmbName
             // 
             cmbName.FormattingEnabled = true;
-            cmbName.Location = new Point(34, 320);
+            cmbName.Location = new Point(33, 313);
             cmbName.Name = "cmbName";
-            cmbName.Size = new Size(270, 28);
+            cmbName.Size = new Size(262, 28);
             cmbName.TabIndex = 8;
             // 
             // lblSearch
             // 
             lblSearch.AutoSize = true;
-            lblSearch.Location = new Point(332, 297);
+            lblSearch.Location = new Point(336, 291);
             lblSearch.Name = "lblSearch";
             lblSearch.Size = new Size(53, 20);
             lblSearch.TabIndex = 9;
             lblSearch.Text = "Search";
-            lblSearch.Click += label6_Click;
             // 
             // txtSearch
             // 
-            txtSearch.Location = new Point(332, 321);
+            txtSearch.Location = new Point(336, 314);
             txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(282, 27);
+            txtSearch.Size = new Size(262, 27);
             txtSearch.TabIndex = 10;
-            // 
-            // btnSave
-            // 
-            btnSave.BackColor = SystemColors.ScrollBar;
-            btnSave.Location = new Point(34, 371);
-            btnSave.Name = "btnSave";
-            btnSave.Size = new Size(82, 29);
-            btnSave.TabIndex = 11;
-            btnSave.Text = "Save";
-            btnSave.UseVisualStyleBackColor = false;
-            btnSave.Click += btnSave_Click;
-            // 
-            // BtnEdit
-            // 
-            BtnEdit.BackColor = SystemColors.ScrollBar;
-            BtnEdit.Location = new Point(128, 371);
-            BtnEdit.Name = "BtnEdit";
-            BtnEdit.Size = new Size(82, 29);
-            BtnEdit.TabIndex = 12;
-            BtnEdit.Text = "Edit";
-            BtnEdit.UseVisualStyleBackColor = false;
-            BtnEdit.Click += btnEdit_Click;
-            // 
-            // btnDelete
-            // 
-            btnDelete.BackColor = SystemColors.ScrollBar;
-            btnDelete.Location = new Point(222, 371);
-            btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(82, 29);
-            btnDelete.TabIndex = 13;
-            btnDelete.Text = "Delete";
-            btnDelete.UseVisualStyleBackColor = false;
-            btnDelete.Click += btnDelete_Click;
             // 
             // picEmployee
             // 
-            picEmployee.Location = new Point(439, 28);
+            picEmployee.Location = new Point(430, 32);
             picEmployee.Name = "picEmployee";
-            picEmployee.Size = new Size(268, 218);
-            picEmployee.TabIndex = 14;
+            picEmployee.Size = new Size(258, 210);
+            picEmployee.TabIndex = 11;
             picEmployee.TabStop = false;
-            picEmployee.Click += picBox_Click;
-            // 
-            // btnShow
-            // 
-            btnShow.BackColor = SystemColors.ScrollBar;
-            btnShow.Location = new Point(625, 319);
-            btnShow.Name = "btnShow";
-            btnShow.Size = new Size(82, 29);
-            btnShow.TabIndex = 15;
-            btnShow.Text = "Show";
-            btnShow.UseVisualStyleBackColor = false;
-            btnShow.Click += btnShow_Click;
             // 
             // dgvEmployees
             // 
             dgvEmployees.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvEmployees.Location = new Point(12, 417);
+            dgvEmployees.Location = new Point(12, 411);
             dgvEmployees.Name = "dgvEmployees";
             dgvEmployees.RowHeadersWidth = 51;
-            dgvEmployees.Size = new Size(717, 269);
-            dgvEmployees.TabIndex = 16;
-            dgvEmployees.CellContentClick += dataGridView1_CellContentClick;
+            dgvEmployees.Size = new Size(711, 259);
+            dgvEmployees.TabIndex = 12;
+            // 
+            // btnSave
+            // 
+            btnSave.BackColor = SystemColors.Menu;
+            btnSave.Location = new Point(33, 359);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(78, 29);
+            btnSave.TabIndex = 13;
+            btnSave.Text = "Save";
+            btnSave.UseVisualStyleBackColor = false;
+            btnSave.Click += btnSave_Click;
+            // 
+            // btnEdit
+            // 
+            btnEdit.BackColor = SystemColors.Menu;
+            btnEdit.Location = new Point(125, 359);
+            btnEdit.Name = "btnEdit";
+            btnEdit.Size = new Size(78, 29);
+            btnEdit.TabIndex = 14;
+            btnEdit.Text = "Edit";
+            btnEdit.UseVisualStyleBackColor = false;
+            btnEdit.Click += btnEdit_Click;
+            // 
+            // btnDelete
+            // 
+            btnDelete.BackColor = SystemColors.Menu;
+            btnDelete.Location = new Point(217, 359);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(78, 29);
+            btnDelete.TabIndex = 15;
+            btnDelete.Text = "Delete";
+            btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
+            // 
+            // btnShow
+            // 
+            btnShow.BackColor = SystemColors.Menu;
+            btnShow.Location = new Point(610, 313);
+            btnShow.Name = "btnShow";
+            btnShow.Size = new Size(78, 29);
+            btnShow.TabIndex = 16;
+            btnShow.Text = "Show";
+            btnShow.UseVisualStyleBackColor = false;
+            btnShow.Click += btnShow_Click;
             // 
             // btnBrowse
             // 
-            btnBrowse.BackColor = SystemColors.ScrollBar;
-            btnBrowse.Location = new Point(532, 252);
+            btnBrowse.BackColor = SystemColors.Menu;
+            btnBrowse.Location = new Point(540, 248);
             btnBrowse.Name = "btnBrowse";
-            btnBrowse.Size = new Size(82, 29);
+            btnBrowse.Size = new Size(78, 29);
             btnBrowse.TabIndex = 17;
             btnBrowse.Text = "...";
             btnBrowse.UseVisualStyleBackColor = false;
+            btnBrowse.Click += btnBrowse_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(741, 698);
+            ClientSize = new Size(735, 682);
             Controls.Add(btnBrowse);
-            Controls.Add(dgvEmployees);
             Controls.Add(btnShow);
-            Controls.Add(picEmployee);
             Controls.Add(btnDelete);
-            Controls.Add(BtnEdit);
+            Controls.Add(btnEdit);
             Controls.Add(btnSave);
+            Controls.Add(dgvEmployees);
+            Controls.Add(picEmployee);
             Controls.Add(txtSearch);
             Controls.Add(lblSearch);
             Controls.Add(cmbName);
@@ -240,7 +235,7 @@ namespace Task6
             Controls.Add(lblSalary);
             Controls.Add(lblJob);
             Controls.Add(lblName);
-            Controls.Add(lblId);
+            Controls.Add(lblID);
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Form1";
@@ -255,22 +250,12 @@ namespace Task6
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
+            LoadEmployees();
         }
 
         #endregion
 
-        private Label lblId;
+        private Label lblID;
         private Label lblName;
         private Label lblJob;
         private Label lblSalary;
@@ -281,12 +266,12 @@ namespace Task6
         private ComboBox cmbName;
         private Label lblSearch;
         private TextBox txtSearch;
-        private Button btnSave;
-        private Button BtnEdit;
-        private Button btnDelete;
         private PictureBox picEmployee;
-        private Button btnShow;
         private DataGridView dgvEmployees;
+        private Button btnSave;
+        private Button btnEdit;
+        private Button btnDelete;
+        private Button btnShow;
         private Button btnBrowse;
     }
 }

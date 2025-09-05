@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Task6
 {
-    public interface IRepository<T> where T : class
+    public interface GenericIRepository<T> where T : class
     {
         // CRUD Operations
 
@@ -16,7 +16,6 @@ namespace Task6
         void Update(T entity);
         void Delete(int id);
         int RowCount();
-        
-
+        void Save();
     }
 }

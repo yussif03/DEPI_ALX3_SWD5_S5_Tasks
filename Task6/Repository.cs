@@ -9,7 +9,7 @@ using Task6.Models;
 
 namespace Task6
 {
-    public class Repository<T> : IRepository<T> where T : class
+    public class Repository<T> : GenericIRepository<T> where T : class
     {
         private readonly EmployeeDbContext _employeeDbContext;
         private readonly DbSet<T> _dbSet;
@@ -70,9 +70,9 @@ namespace Task6
             }
         }
 
-        internal void Save()
+        public void Save()
         {
-            throw new NotImplementedException();
+            _employeeDbContext.SaveChanges();
         }
     }
 }

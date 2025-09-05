@@ -1,0 +1,13 @@
+CREATE DATABASE EmployeeDB;
+GO
+
+USE EmployeeDB;
+GO
+
+CREATE TABLE Employees (
+    ID INT PRIMARY KEY IDENTITY(1,1),
+    Name NVARCHAR(100) NOT NULL,
+    Job NVARCHAR(100),
+    Salary DECIMAL(18,2),
+    Photo VARBINARY(MAX) NULL
+);
